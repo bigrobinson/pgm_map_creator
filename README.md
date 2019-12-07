@@ -1,5 +1,5 @@
 # pgm_map_creator
-Create pgm map from Gazebo world file for ROS localization
+Create pgm map from Gazebo world file for ROS localization. This fork deals with build errors and map generation errors that occur using later ROS, Gazebo, and Boost versions.
 
 ## Environment
 Tested on Ubuntu 18.04, ROS Melodic, Gazebo 9.0, Boost 1.65 
