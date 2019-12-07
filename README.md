@@ -9,9 +9,10 @@ Tested on Ubuntu 18.04, ROS Melodic, Gazebo 9.0, Boost 1.65
 ### Add the package to your workspace
 0. Create a catkin workspace
 1. Clone the package to the src folder
-2. Add the following definition to top of /usr/include/boost/gil/extension/io/png_io_private.hpp  
+2. Add the following definition to top of /usr/include/boost/gil/extension/io/png_io_private.hpp:  
 #define int_p_NULL (int*)NULL
 3. in pgm_map_creator/src/collision_map_creator.cc make the following changes due to changes in Gazebo physics::World class method names:  
+
 line 35: Change gettName()" to "Name()"  
 line 91: "GetPhysicsEngine()" to "Physics()"  
 
