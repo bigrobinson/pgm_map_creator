@@ -10,29 +10,29 @@ Tested on Ubuntu 18.04, ROS Melodic, Gazebo 9.0, Boost 1.65
 0. Create a catkin workspace
 1. Clone the package to the src folder
 2. Add the following definition to top of /usr/include/boost/gil/extension/io/png_io_private.hpp:  
-#define int_p_NULL (int*)NULL
+`#define int_p_NULL (int*)NULL`
 3. in pgm_map_creator/src/collision_map_creator.cc make the following changes due to changes in Gazebo physics::World class method names:  
 
-line 35: Change gettName()" to "Name()"  
-line 91: "GetPhysicsEngine()" to "Physics()"  
+line 35: Change `gettName()` to `Name()`  
+line 91: `GetPhysicsEngine()` to `Physics()`  
 
 4. In /catkin_ws/src/pgm_map_creator/msgs/CMakeLists.txt:  
 
 change this  
-
+```
 set (msgs  
   collision_map_request.proto  
   ${PROTOBUF_IMPORT_DIRS}/vector2d.proto  
   ${PROTOBUF_IMPORT_DIRS}/header.proto  
   ${PROTOBUF_IMPORT_DIRS}/time.proto  
 )  
-
+```
 to  
-
+```
 set (msgs  
   collision_map_request.proto  
 )  
-
+```
 5. `catkin_make` and source `devel/setup.bash`
 
 ### Add the map and insert the plugin
