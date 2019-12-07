@@ -16,7 +16,7 @@ Tested on Ubuntu 18.04, ROS Melodic, Gazebo 9.0, Boost 1.65
 line 35: Change `getName()` to `Name()`  
 line 91: `GetPhysicsEngine()` to `Physics()`  
 
-4. In /catkin_ws/src/pgm_map_creator/msgs/CMakeLists.txt:  
+4. To avoid protobuf compiler errors, in /catkin_ws/src/pgm_map_creator/msgs/CMakeLists.txt:  
 
 change this  
 ```
