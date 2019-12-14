@@ -30,7 +30,9 @@ set (msgs
 to  
 ```
 set (msgs  
-  collision_map_request.proto  
+  collision_map_request.proto
+  ${PROTOBUF_IMPORT_DIRS}/header.proto  
+  ${PROTOBUF_IMPORT_DIRS}/time.proto  
 )  
 ```
 5. `catkin_make` and source `devel/setup.bash`
